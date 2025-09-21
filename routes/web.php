@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/about-buah', function () {
-    return view('halaman-about-jus-buah');
-});
+use App\Http\Controllers\JusController;
+
+
+  route::get('/Jus/{param1}', [JusController::class, 'show']);
+
+
