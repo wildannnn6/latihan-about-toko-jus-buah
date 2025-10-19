@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class JusController extends Controller
+class MahasiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,14 +34,12 @@ class JusController extends Controller
      * Display the specified resource.
      */
     public function show(string $param1)
-     {
-       if ($param1 == 'home'){
-        return view('halaman-home-jus-buah');
-       }else if($param1 == 'menu'){
-        return view('halaman-menu-jus-buah');
-       }else if($param1 == 'about'){
-        return view('halaman-about-jus-buah');
-    }
+    {
+        if($param1 == 'detail'){
+            return view ('halaman-mahasiswa-detail');
+        } else if ($param1 == 'profil'){
+            return view ('halaman-mahasiswa-profil');
+        }
     }
 
     /**
